@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function ConsultationRules(){return <div className="wrap section detail"><div className="card"><h1>相談ルール</h1><ul><li>電話番号・住所・学校名・勤務先などの交換を求めないでください。</li><li>対面で会うことを求めたり、危険な行動を勧めたりしないでください。</li><li>未成年者と成人資格者の個別相談には、サービス上の保護者同意手続きが必要です。</li><li>相談相手は申請を断ることができ、相談はいつでも終了できます。</li></ul><p className="muted">保護者同意の具体的な法的要件は、公開前に実装・利用形態に合わせて確認してください。</p><Link className="text-link" href="/legal/community">コミュニティガイドラインへ</Link></div></div>}

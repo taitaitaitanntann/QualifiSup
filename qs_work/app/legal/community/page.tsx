@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function Community(){return <div className="wrap section detail"><div className="card"><h1>コミュニティガイドライン</h1><p>QualifiSupは資格学習の情報交換を目的とします。</p><h3>禁止事項</h3><ul><li>誹謗中傷、脅迫、嫌がらせ</li><li>資格と無関係な迷惑行為</li><li>なりすまし、虚偽情報の故意の拡散</li><li>個人情報・連絡先の交換を促す行為</li><li>対面で会うことを求める行為</li><li>未成年者に不適切な内容を送る行為</li></ul><h3>違反時</h3><p>運営が確認し、警告、削除、利用制限、アカウント停止など必要な対応を行います。</p><Link className="text-link" href="/terms">利用規約へ</Link></div></div>}
