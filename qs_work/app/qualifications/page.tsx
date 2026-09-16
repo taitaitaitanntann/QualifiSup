@@ -31,7 +31,7 @@ export default function Qualifications(){
  <select value={sort} onChange={e=>setSort(e.target.value)}><option value="recommend">おすすめ順</option><option value="fee">受験料が安い順</option><option value="new">掲載順</option></select>
  </div></div>
  <div style={{display:"flex",justifyContent:"space-between",marginBottom:12}}><Link className="text-link" href="/qualifications/suggest">＋資格掲載を申請</Link><b>{filtered.length}件</b>{loading&&<span className="muted">データベース確認中…</span>}</div>
- <div className="list">{filtered.map((x,i)=><Link className="card" href={x.name==="二級建築士"?"/qualifications/second-class-architect":"#"} key={x.id??x.name}><span className="pill">{x.field}</span><h3>{x.name}</h3><span className="tag">{x.qualification_type}</span><span className="tag">{x.eligibility_status}</span>{x.exam_fee&&<span className="tag">受験料 {x.exam_fee.toLocaleString()}円</span>}<p className="muted">試験：{x.exam_date??"未確認"}</p><p className="status verified">🟢 公式確認済み　出典：{x.source_name}</p></Link>)}</div>
+ <div className="list">{filtered.map((x,i)=><Link className="card" href={x.name==="二級建築士" ? "/qualifications/second-class-architect" : `/qualifications/${x.id ?? ""}`} key={x.id??x.name}><span className="pill">{x.field}</span><h3>{x.name}</h3><span className="tag">{x.qualification_type}</span><span className="tag">{x.eligibility_status}</span>{x.exam_fee&&<span className="tag">受験料 {x.exam_fee.toLocaleString()}円</span>}<p className="muted">試験：{x.exam_date??"未確認"}</p><p className="status verified">🟢 公式確認済み　出典：{x.source_name}</p></Link>)}</div>
  {!filtered.length&&<div className="empty">条件に一致する資格がありません。条件を緩めて再検索してください。</div>}
  </div>
 }
